@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Билайн - Кейс-Чемпионат</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #13140B, #CCC102);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #000000, #E8DB00);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #13140B;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #13140B;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: #FFE400;
+            box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.2);
+            outline: none;
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #13140B;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        
+        .info-box {
+            background-color: #fff9e6;
+            border-left: 5px solid #ffcc00;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🎁</div>
+            <h1>Билайн</h1>
+            <p class="subtitle">Опрос пользователей продуктов компании</p>
+        </header>
+        
+        <div class="content">
+            <div class="info-box">
+                <p>Мы ценим ваше мнение! Пожалуйста, уделите несколько минут, чтобы поделиться своим опытом использования наших продуктов и услуг.</p>
+            </div>
+            
+            <form id="userForm">
+                <div class="form-group">
+                    <label for="fullName">Фамилия Имя</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Введите ваши фамилию и имя" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Возраст</label>
+                    <input type="number" id="age" name="age" min="10" max="80" placeholder="Введите ваш возраст" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="profession">Профессия</label>
+                    <input type="text" id="profession" name="profession" placeholder="Введите вашу профессию" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="experience">Опыт использования продуктов компании</label>
+                    <textarea id="experience" name="experience" placeholder="Расскажите о вашем опыте использования наших продуктов: электроники, бытовой техники, косметики" required></textarea>
+                </div>
+                <button type="submit" class="btn">Отправить данные</button>
+            </form>
+        </div>
+        <footer>
+            <p>© 2025 Билайн. Кейс-Чемпионат.</p>
+        </footer>
+    </div>
+</body>
+</html>
